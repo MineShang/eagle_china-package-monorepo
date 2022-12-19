@@ -1,6 +1,9 @@
 {
   "name": "@mineshang/ec_china-package-monorepo",
-  "version": "1.0.0",
+  "version": "1.8.0",
+  "files": [
+    "dist"
+  ],
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -8,8 +11,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "version": "conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "prepublishOnly": "pnpm run build"
+    "version": "conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
