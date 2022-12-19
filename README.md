@@ -1,63 +1,78 @@
-# monorepo
+### ec_china-package-monorepo
 
-## 安装
+### Apps and Packages
 
-1. 主项目增加 .npmrc
+- `web`: another [Next.js](https://nextjs.org/) app
+- `ui`: a stub React component library shared by both `web`applications
+
+### Install
+
+1. Add a .npmrc file
 
 ```config
 @mineshang:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=<PERSONAL_ACCESS_TOKEN>
 ```
 
-2. 安装依赖
+2. Install dependencies
 
 ```bash
 pnpm i @mineshang/eagle_china-package-monorepo@<version>
 ```
 
-## 开发
+### Build
 
-```bash
+To build all apps and packages, run the following command:
+
+```
+cd ec_china-package-monorepo
+pnpm run build
+```
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```
+cd ec_china-package-monorepo
 pnpm run dev
 ```
 
-## 发布
+### Deployment
 
-1. 安装依赖
+1. Install dependencies
 
 ```sh
 pnpm i
 ```
 
-2. 修改代码并提交
+2. Add & Commit
 
 ```sh
 git add .
-git commit -m "票号 描述"
+git commit -m "[PSEP-XXXX] [commit message/description]"
 ```
 
-3. 执行`changeset`并选择相应的修改范围
+3. Run changeset
 
 ```sh
 pnpm run changeset
 ```
 
-4. 执行`changeset version`
+4. Run changeset version
 
 ```sh
 pnpm run version
 ```
 
-5. 提交
+5. Add & Commit
 
 ```sh
 git add .
-git commit -m "票号 描述"
+git commit -m "[PSEP-XXXX] [commit message/description]"
 ```
 
-6. 提交 Pull Request
-
-## 本地打包
+6. Pull Request
 
 ```bash
 npm run build

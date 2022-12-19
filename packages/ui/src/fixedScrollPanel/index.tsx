@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect } from "react";
 import throttle from "lodash.throttle";
 
-export type FixedScrollPanelProps = {
+type FixedScrollPanelProps = {
   children: ReactNode;
   fixedColumnId?: string;
   customFixedColumnTop?: number;
